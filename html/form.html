@@ -1,0 +1,107 @@
+<!-------------------------------------------------------------------------------
+Student: Vagner Machado
+QCID: 23651127
+
+Comment: I added a few things to the provided form:
+	* A background to the body
+	* A viewport of .62 so it looks ok on phones
+	* Added a link to a favicon
+	* Added a simple header title to the page
+
+	This form accomplishes collecting a color form the user and a fruit.The 
+	first is chosen through a color pick and the second through a radio button group choice.
+	After choosing, the user clicks on the submit button which send the data through method GET to 
+	destination 'design' as specified in the for action field
+
+	-Vagner
+-------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta name="viewport" content="width=device-width, autoRotate:disabled, initial-scale=0.62 ">
+		<title>Soda Designer</title>
+		<style>
+			body, input{
+			font-size:200%;
+			background:url(https://trailthrill.files.wordpress.com/2016/05/color-run.png?w=648);
+   			background-size:cover;
+			}
+			#credits{
+			position:fixed; 
+			bottom:0;
+			margin:0 auto;
+			display:block;
+			}
+			.fruit{
+			width:50%; 
+			float:left;
+			}
+			form{
+				background-color: white;
+				margin-top: 5px;
+				opacity: 0.9;
+			}
+			h3{
+				text-align: center;
+			}
+		</style>
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
+	</head>
+	<body>
+		<h3> Build Your Soda Can! </h3>
+		<form action="design" method="get">
+			<fieldset>
+				<legend>Soda Designer</legend>
+				
+				<label>Can Color</label>
+				<input style= "background: white;" type="color" name="color" value="#0000FF"/>
+				<br />
+				
+				<label>Flavor</label>
+				<br />
+				<div class="fruit">
+					<input type="radio" name="flavor" value="apple" id="apple" checked>
+					<label for="apple">Apple</label>
+				</div>
+				<div class="fruit">
+					<input type="radio" name="flavor" value="banana" id="banana">
+					<label for="banana">Banana</label>
+				</div>
+				<div class="fruit">
+					<input type="radio" name="flavor" value="cherry" id="cherry">
+					<label for="cherry">Cherry</label>
+				</div>
+				<div class="fruit">
+					<input type="radio" name="flavor" value="grape" id="grape">
+					<label for="grape">Grape</label>
+				</div>
+				<div class="fruit">
+					<input type="radio" name="flavor" value="mango" id="mango">
+					<label for="mango">Mango</label>
+				</div>
+				<div class="fruit">
+					<input type="radio" name="flavor" value="orange" id="orange">
+					<label for="orange">Orange</label>
+				</div>
+				<div class="fruit">
+					<input type="radio" name="flavor" value="watermelon" id="watermelon">
+					<label for="watermelon">Watermelon</label>
+				</div>
+				<div class="fruit">
+					<input type="radio" name="flavor" value="crab" id="crab">
+					<label for="crab">Crab</label>
+				</div>
+				<div class="fruit">
+					<input type="radio" name="flavor" value="coconut" id="coconut">
+					<label for="coconut">Coconut</label>
+				</div>
+				<br style="clear:both;"/>
+				<hr />
+				<input  type="submit"style= "background: white; font-size: .8em;" value="Submit Query">
+			</fieldset>
+		</form>
+		<p id="credits">
+			<a href="image-credits.txt">Image Credits</a>
+		</p>
+	</body>
+</html>
